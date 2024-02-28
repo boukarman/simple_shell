@@ -19,7 +19,7 @@ int execute(char **command, char **av, int index)
 	{
 		error_print(av, command[0], index);
 		free(path), path = NULL;
-		free2d(command), command = NULL;
+		free_2d_array(cmd), cmd = NULL;
 		return (127);
 	}
 	fork_result = fork();
@@ -29,7 +29,7 @@ int execute(char **command, char **av, int index)
 		if (execve(path, command, environ) == -1)
 		{
 			perror(av[0]);
-			free2d(command), path = NULL;
+			free_2d_array(cmd), path = NULL;
 			free(path), path = NULL;
 			return (127);
 		}
@@ -37,7 +37,7 @@ int execute(char **command, char **av, int index)
 	else
 	{
 		waitpid(fork_result, &status, 0);
-		free2d(command), command = NULL;
+		free_2d_array(cmd), cmd = NULL;
 		free(path), path = NULL;
 	}
 	return (WEXITSTATUS(status));

@@ -40,14 +40,14 @@ char *_strdup(char *line)
 }
 
 /**
- * _strcopy - copy a string from source to destination including
+ * _strcpy - copy a string from source to destination including
  * the null byte (\0)
  * @dest: destination character array
  * @src: source characters array
  *
  * Return: characters array
  */
-char *_strcopy(char *dest, char *src)
+char *_strcpy(char *dest, char *src)
 {
 	char *orig_dest, *orig_src;
 

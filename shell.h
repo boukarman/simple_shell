@@ -9,6 +9,8 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <sys/stat.h>
+#include <error.h>
+#include <fcntl.h>
 
 extern char **environ;
 
@@ -26,13 +28,13 @@ void exit_builtin(char **av, int ac, char **command, int *status, int *index);
 int _strlen(char *str);
 char *_strdup(char *line);
 int _strncmp(char *str1, char *str2, int n);
-char *_strcopy(char *dest, char *src);
+char *_strcpy(char *dest, char *src);
 char *_strcat(char *dest, char *src);
 int _atoi(char *s);
 char *_itoa(int n);
 int _strcmp(char *str1, char *str2);
 int is_number(char *str);
 
-void free2d(char **command);
+void free_2d_array(char **cmd);
 
 #endif
