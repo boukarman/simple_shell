@@ -12,7 +12,7 @@
 
 extern char **environ;
 
-char *_getline(void);
+char *read_line(void);
 char **_tokenizer(char *line);
 char *_getpath(char *cmd);
 int execute(char **command, char **av, int index);
