@@ -3,6 +3,10 @@ Group project
 Naoufel Boukarma, MUSENGAYEZU Jean Luc
 0x16. C - Simple Shell
  Weight: 10
+
+Concepts
+For this project, we expect you to look at these concepts:
+
 0. Betty would be proud
 Write a beautiful code that passes the Betty checks
 
@@ -31,4 +35,5 @@ You don’t have to handle any argument to the built-in exit
 Simple shell 0.4 +
 
 Implement the env built-in, that prints the current environment
+
 simple_shell
