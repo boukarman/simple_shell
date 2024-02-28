@@ -26,7 +26,7 @@ void exit_builtin(char **av, int ac, char **command, int *status, int *index);
 int _strlen(char *str);
 char *_strdup(char *line);
 int _strncmp(char *str1, char *str2, int n);
-char *_strcpy(char *dest, char *src);
+char *_strcopy(char *dest, char *src);
 char *_strcat(char *dest, char *src);
 int _atoi(char *s);
 char *_itoa(int n);
