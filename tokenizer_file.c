@@ -12,7 +12,7 @@ char **_tokenizer(char *line)
 {
 	char *line_copy = NULL;
 	char *token = NULL;
-	char **command = NULL;
+	char **cmd = NULL;
 	int len = 0, i;
 
 	if (line == NULL)
@@ -31,8 +31,8 @@ char **_tokenizer(char *line)
 		token = strtok(NULL, DELIM);
 	}
 	free(line_copy), line_cpy = NULL;
-	command = malloc(sizeof(char *) * (len + 1));
-	if (command == NULL)
+	cmd = malloc(sizeof(char *) * (len + 1));
+	if (cmd == NULL)
 	{
 		free(line), line = NULL;
 		return (NULL);
@@ -41,10 +41,10 @@ char **_tokenizer(char *line)
 	i = 0;
 	while (token)
 	{
-		command[i++] = _strdup(token);
+		cmd[i++] = _strdup(token);
 		token = strtok(NULL, DELIM);
 	}
-	command[i] = NULL;
+	cmd[i] = NULL;
 	free(line), line = NULL;
-	return (command);
+	return (cmd);
 }

@@ -11,7 +11,7 @@
 int main(int ac, char **av)
 {
 	char *line = NULL;
-	char **command = NULL;
+	char **cmd = NULL;
 	int status = 0;
 	int index = 0;
 	(void) ac;
@@ -26,14 +26,14 @@ int main(int ac, char **av)
 			return (status);
 		}
 		index++;
-		command = _tokenizer(line);
-		if (command == NULL)
+		cmd = _tokenizer(line);
+		if (cmd == NULL)
 			continue;
-		if (is_builtins(av, ac, command, &index, &status) == 1)
+		if (is_builtin(av, ac, cmd, &index, &status) == 1)
 		{
-			handle_builtins(av, ac, command, &index, &status);
+			builtin_handle(av, ac, cmd, &index, &status);
 		}
 		else
-			status = execute(command, av, index);
+			status = execute(cmd, av, index);
 	}
 }

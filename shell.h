@@ -17,21 +17,22 @@ extern char **environ;
 char *read_line(void);
 char **_tokenizer(char *line);
 char *_getpath(char *cmd);
-int execute(char **command, char **av, int index);
-void error_print(char **av, char *cmd, int index);
-int is_builtins(char **av, int ac, char **command, int *index, int *status);
-void handle_builtins(char **av, int ac, char **cmd, int *index, int *status);
-void _print_env(char **command, int *status);
-void print_exit_error(char **av, int *index, char **command);
-void exit_builtin(char **av, int ac, char **command, int *status, int *index);
+char *_getenv(char *name)
+int execute(char **cmd, char **av, int index);
+void print_error(char **av, char *cmd, int index);
+int is_builtin(char **av, int ac, char **cmd, int *index, int *status);
+void builtin_handle(char **av, int ac, char **cmd, int *index, int *status);
+void print_env(char **cmd, int *status);
+void exit_error(char **av, int *index, char **cmd);
+void builtin_exit(char **av, int ac, char **cmd, int *status, int *index);
 
 int _strlen(char *str);
 char *_strdup(char *line);
 int _strncmp(char *str1, char *str2, int n);
 char *_strcpy(char *dest, char *src);
 char *_strcat(char *dest, char *src);
-int _atoi(char *s);
-char *_itoa(int n);
+int _strtoint(char *s);
+char *_inttostr(int n);
 int _strcmp(char *str1, char *str2);
 int is_number(char *str);
 

@@ -8,7 +8,7 @@
  *
  * Return: the status
 */
-int execute(char **command, char **av, int index)
+int execute(char **cmd, char **av, int index)
 {
 	pid_t fork_result;
 	int status = 0;
@@ -17,7 +17,7 @@ int execute(char **command, char **av, int index)
 	path = _getpath(command[0]);
 	if (path == NULL)
 	{
-		error_print(av, command[0], index);
+		print_error(av, cmd[0], index);
 		free(path), path = NULL;
 		free_2d_array(cmd), cmd = NULL;
 		return (127);
@@ -26,7 +26,7 @@ int execute(char **command, char **av, int index)
 
 	if (fork_result == 0)
 	{
-		if (execve(path, command, environ) == -1)
+		if (execve(path, cmd, environ) == -1)
 		{
 			perror(av[0]);
 			free_2d_array(cmd), path = NULL;
