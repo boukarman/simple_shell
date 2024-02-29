@@ -2,7 +2,7 @@
 
 /**
  * is_builtin - check if build in
- * @command: command
+ * @cmd: command
  * @index: line inde
  * @av: argument table
  * @status: status
@@ -54,7 +54,7 @@ void builtin_handle(char **av, int ac, char **cmd, int *index, int *status)
 /**
  * print_env - print env content
  * @status: status
- * @command: command array
+ * @cmd: command array
  *
  * Return: nothing
 */
@@ -75,7 +75,7 @@ void print_env(char **cmd, int *status)
  * builtin_exit - exit builtin
  * @av: argument array
  * @ac: argument count
- * @command: command array
+ * @cmd: command array
  * @status: status
  * @index: index
  *
@@ -116,7 +116,7 @@ void builtin_exit(char **av, int ac, char **cmd, int *status, int *index)
  * exit_error - print exit error
  * @av: array argument
  * @index: index
- * @command: command array
+ * @cmd: command array
  *
  * Return: nothing
 */

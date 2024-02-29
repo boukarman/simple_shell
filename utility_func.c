@@ -2,7 +2,7 @@
 
 /**
  * free_2d_array - func to free 2 dimentional array
- * @command: arguments array
+ * @cmd: arguments array
  *
  * Return: Nothing
 */
@@ -20,7 +20,7 @@ void free_2d_array(char **cmd)
  * _strncmp - compare if two strings are equal
  * @str1: string number 1
  * @str2: string number 2
- * @n: length
+ * @n: lenght
  *
  * Return: 0 if equal or 1 if not
 */

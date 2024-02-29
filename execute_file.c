@@ -2,7 +2,7 @@
 
 /**
  * execute - func execute commands
- * @command: commands
+ * @cmd: commands
  * @av: arguments
  * @index: line index
  *
