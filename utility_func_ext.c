@@ -6,7 +6,7 @@
  *
  * Return: converted integer
  */
-char *_strtoint(int n)
+char *_inttostr(int n)
 {
 	char buffer[20];
 	int i = 0, j, len, n_copy;
