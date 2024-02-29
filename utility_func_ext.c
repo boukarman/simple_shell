@@ -59,12 +59,12 @@ void print_error(char **av, char *cmd, int index)
 	free(str_index);
 }
 /**
- * _atoi - func convert string to integer
+ * _strtoint - func convert string to integer
  * @s: string
  *
  * Return: converted integer
  */
-int _atoi(char *s)
+int _strtoint(char *s)
 {
 	int minus, plus, sign, len, multi, result;
 	char *slen;
